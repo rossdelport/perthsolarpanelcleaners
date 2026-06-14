@@ -164,11 +164,10 @@ strong { color: var(--ink); }
 .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); }
 .brand:hover { color: var(--ink); }
 .brand-logo {
-  width: 46px; height: 46px; flex: none;
+  width: 48px; height: 48px; flex: none;
   display: grid; place-items: center;
-  background: linear-gradient(150deg, var(--blue-600), var(--blue-800));
-  border-radius: 12px; box-shadow: var(--shadow-sm);
 }
+.brand-logo img { width: 48px; height: 48px; object-fit: contain; display: block; }
 .brand-logo svg { width: 30px; height: 30px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-name { font-family: var(--font-head); font-weight: 700; font-size: 1.06rem; color: var(--ink); letter-spacing: -.02em; }
