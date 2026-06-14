@@ -29,13 +29,13 @@ The "Get a Free Quote" forms submit **directly to your inbox** using
 account**. On submit, the page shows a **toast notification** (success / error) without
 reloading.
 
-Quote requests are delivered to: **rossdelport1998@gmail.com**
+Quote requests are delivered to: **ross@perthsolarpanelcleaners.com**
 
 ### ⚠️ One-time activation (required before emails arrive)
 FormSubmit needs a single confirmation the first time:
 
 1. After the site is live, open it and submit the quote form once (any test details).
-2. FormSubmit emails an **activation link** to `rossdelport1998@gmail.com`.
+2. FormSubmit emails an **activation link** to `ross@perthsolarpanelcleaners.com`.
 3. Click that link once. From then on, every submission is delivered automatically.
 
 To change the destination address, edit `FORM_ENDPOINT` at the top of `js/main.js`.

@@ -12,7 +12,7 @@
   /* Destination inbox for quote requests. FormSubmit relays the message
      to this address with no backend required. (First submission triggers
      a one-time activation email that the owner confirms.) */
-  var FORM_ENDPOINT = "https://formsubmit.co/ajax/rossdelport1998@gmail.com";
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/ross@perthsolarpanelcleaners.com";
 
   var doc = document;
   var on = function (el, ev, fn, opts) { if (el) el.addEventListener(ev, fn, opts); };
@@ -163,7 +163,7 @@
         .catch(function () {
           if (btn) btn.removeAttribute("aria-busy");
           showToast("error", "Couldn’t send just now",
-            "Please call us on 0400 369 865 or email rossdelport1998@gmail.com and we’ll sort it out.", 9000);
+            "Please call us on 0400 369 865 or email ross@perthsolarpanelcleaners.com and we’ll sort it out.", 9000);
         });
     });
   });
