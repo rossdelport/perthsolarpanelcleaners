@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /privacy-policy.html
 
-Sitemap: https://perthsolarpanelcleaners.com/sitemap.xml
+Sitemap: https://www.perthsolarpanelcleaners.com/sitemap.xml
