@@ -12,9 +12,11 @@
   /* Destination inbox for quote requests. FormSubmit relays the message
      to this address with no backend required. (First submission triggers
      a one-time activation email that the owner confirms.) */
-  var FORM_ENDPOINT = "https://formsubmit.co/ajax/rossdelport1998@gmail.com";
-  /* Extra recipient(s) CC'd on every submission (comma-separated). */
-  var FORM_CC = "ross@perthsolarpanelcleaners.com";
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/ross@perthsolarpanelcleaners.com";
+  /* Extra inboxes that get their own copy of every submission. Each is a
+     separate FormSubmit endpoint (needs its own one-time activation); a
+     failure here never affects the main submission or the toast. */
+  var EXTRA_ENDPOINTS = ["https://formsubmit.co/ajax/rossdelport1998@gmail.com"];
 
   var doc = document;
   var on = function (el, ev, fn, opts) { if (el) el.addEventListener(ev, fn, opts); };
@@ -143,7 +145,14 @@
       data._subject = "🌞 New Free Quote Request — Perth Solar Panel Cleaners";
       data._template = "table";
       data._captcha = "false";
-      data._cc = FORM_CC; // copy every submission to this inbox too
+
+      EXTRA_ENDPOINTS.forEach(function (url) {
+        fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(data)
+        }).catch(function () {});
+      });
 
       fetch(FORM_ENDPOINT, {
         method: "POST",
